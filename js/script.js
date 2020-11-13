@@ -13,14 +13,65 @@ generaBiglietto.addEventListener("click",
 
   function() {
     var yourName = document.getElementById("name").value;
-    console.log(yourName)
+    console.log(yourName);
 
     var yourKm = document.getElementById("km").value;
-    console.log(yourKm)
+    console.log(yourKm);
 
     var yourAge = document.getElementById("age").value;
-    console.log(yourAge)
+    console.log(yourAge);
 
+    // Prezzo di un km percorso
+    var euroKm = 0.21;
+    console.log("Costo di un km: " + euroKm);
+
+    ///Prezzo base
+    var euroTot = yourKm * euroKm ;
+    console.log("Costo del viaggio: " + euroTot);
+
+    // Sconto per minorenni
+    var saleUnderage = euroTot / 1.20;
+    // console.log(saleUnderage);
+
+    // Sconto per Over65
+    var saleSenior = euroTot / 1.40;
+    // console.log(saleSenior);
+
+    // Messaggio offerta
+    var msgOffer = "";
+
+    // Applicazione del prezzo
+    if (yourAge == "minorenne") {
+      saleUnderage.toFixed(2);
+      console.log("Prezzo scontato al minore: " + saleUnderage.toFixed(2));
+
+      msgOffer = "Offerta riservata a minorenni";
+
+    } else if (yourAge == "over65") {
+      saleSenior.toFixed(2);
+      console.log("Prezzo scontato al senior: " + saleSenior.toFixed(2));
+
+      msgOffer = "Offerta Gold Senior";
+
+    } else {
+      euroTot;
+      console.log("Prezzo pieno: " + euroTot.toFixed(2));
+
+      msgOffer = "Prezzo standard";
+
+    }
+
+    // Generazione biglietto
+    var nameUtent = document.getElementById("name").value;
+    document.getElementById("name_passenger").innerHTML = nameUtent;
+
+    var numCarriage = Math.floor(Math.random() * 10) + 1;
+    document.getElementById("number_carriage").innerHTML = numCarriage;
+
+    var numCode = Math.floor(Math.random() * 10000) + 90000;
+    document.getElementById("number_code").innerHTML = numCode;
+
+    document.getElementById("offer").innerHTML = msgOffer;
   }
 );
 
