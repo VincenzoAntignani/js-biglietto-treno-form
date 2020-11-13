@@ -77,6 +77,8 @@ generaBiglietto.addEventListener("click",
     document.getElementById("offer").innerHTML = msgOffer;
 
     // Far apparire il biglietto del treno
+    var ticketGenerated = document.getElementById("ticket");
+    ticketGenerated.className = "show";
 
   }
 );
