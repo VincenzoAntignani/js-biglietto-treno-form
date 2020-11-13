@@ -42,23 +42,25 @@ generaBiglietto.addEventListener("click",
 
     // Applicazione del prezzo
     if (yourAge == "minorenne") {
-      saleUnderage.toFixed(2);
-      console.log("Prezzo scontato al minore: " + saleUnderage.toFixed(2));
+
+      document.getElementById("final_price").innerHTML = "€ " + saleUnderage.toFixed(2);
+      console.log("scontato: " + saleUnderage.toFixed(2));
 
       msgOffer = "Offerta riservata a minorenni";
 
     } else if (yourAge == "over65") {
-      saleSenior.toFixed(2);
-      console.log("Prezzo scontato al senior: " + saleSenior.toFixed(2));
+
+      document.getElementById("final_price").innerHTML = "€ " + saleSenior.toFixed(2);
+      console.log("scontato senior: " + saleSenior.toFixed(2));
 
       msgOffer = "Offerta Gold Senior";
 
     } else {
-      euroTot;
-      console.log("Prezzo pieno: " + euroTot.toFixed(2));
+
+      document.getElementById("final_price").innerHTML = "€ " + euroTot.toFixed(2);
+      console.log("standard: " + euroTot.toFixed(2));
 
       msgOffer = "Prezzo standard";
-
     }
 
     // Generazione biglietto
@@ -71,7 +73,11 @@ generaBiglietto.addEventListener("click",
     var numCode = Math.floor(Math.random() * 10000) + 90000;
     document.getElementById("number_code").innerHTML = numCode;
 
+
     document.getElementById("offer").innerHTML = msgOffer;
+
+    // Far apparire il biglietto del treno
+
   }
 );
 
