@@ -1,7 +1,103 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+body {
+  background-image: url('https://images2.corriereobjects.it/methode_image/2014/04/01/Tecnologia/Foto%20Gallery/Copia%20di%2019%20Mercury%203_MGZOOM.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_70 {
+  width: 70%;
+  height: 56vh;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 0, 0, 0.7);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: lightgrey;
+}
+
+span {
+  display: block;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+h4 {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  height: 40px;
+  padding: 5px;
+}
+
+.user_data {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container_btn {
+  text-align: center;
+  padding: 20px;
+}
+
+input, select {
+  width: 250px;
+  height: 40px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+  font-size: 16px;
+}
+input:hover,
+select:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+#btn_genera, #btn_delete {
+  margin: 0 10px;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px -1px black;
+  cursor: pointer;
+}
+#btn_genera:hover {
+  background: green;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: -1px -1px white;
+}
+#btn_delete:hover {
+  background: orange;
+  color: white;
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: -1px -1px white;
+}
+
+/* Biblietto */
 .hidden {
   opacity: 0;
 }
@@ -12,5 +108,43 @@
 }
 
 #ticket {
+  display: flex;
+  margin-top: 20px;
   background: green;
+  background: url("https://www.missionline.it/wp-content/uploads/2019/07/Treno-AV.png");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 15px;
+}
+.layover {
+  height: 300px;
+}
+
+.ticket_left {
+  padding: 15px;
+  width: 25%;
+  height: 250px;
+  background: rgba(47,79,79, 0.8);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-right: 2px dashed black;
+}
+.ticket_right {
+  padding: 15px;
+  width: 75%;
+  background: rgba(47,79,79, 0.8);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.data_ticket {
+  display: flex;
+}
+.num_carriage, .num_code, .descr_offer, .price_ticket {
+  width: 20%;
+  padding: 15px;
+}
+.name_pass {
+  width: 100%;
+  padding: 15px;
 }

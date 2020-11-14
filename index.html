@@ -3,41 +3,83 @@
   <head>
     <meta charset="utf-8">
     <title>Biglietto treno form</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="wrapper_80">
+    <div class="container_70">
+      <div class="row_data">
+        <h1>Il tuo biglietto</h1>
+        <div class="user_data">
+          <div class="your_name">
+            <h3 class="title_input">Nome e cognome</h3>
+            <input id="name" type="text" name="name" placeholder="Inserisci nome e cognome">
+          </div>
 
-      <div class="your_name">
-        <h3 class="title_input">Nome e cognome</h3>
-        <input id="name" type="text" name="name" placeholder="Inserisci nome e cognome">
+          <div class="your_km">
+            <h3 class="title_input">Quanto vuoi viaggiare</h3>
+            <input id="km" type="number" name="km" placeholder="Inserisci km che vuoi percorrere">
+          </div>
+
+          <div class="your_age">
+            <h3 class="title_input">la tua età</h3>
+            <select id="age" type="" name="age" placeholder="Inserisci la tua età">
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over65">Over 65</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="container_btn">
+          <button id="btn_genera" type="button" name="button">Genera</button>
+          <button id="btn_delete" type="button" name="button">Annulla</button>
+        </div>
       </div>
 
-      <div class="your_km">
-        <h3 class="title_input">km da percorrere</h3>
-        <input id="km" type="number" name="km" placeholder="Inserisci km ">
-      </div>
+      <hr>
 
-      <div class="your_age">
-        <h3 class="title_input">la tua età</h3>
-        <select id="age" type="" name="age" placeholder="Inserisci la tua età">
-          <option value="minorenne">Minorenne</option>
-          <option value="maggiorenne">Maggiorenne</option>
-          <option value="over65">Over 65</option>
-        </select>
-      </div>
-
-      <button id="btn_genera" type="button" name="button">Genera</button>
-      <button id="btn_delete" type="button" name="button">Annulla</button>
-
+      <!-- Biglietto -->
       <div id="ticket" class="hidden">
-        <p id="name_passenger">hjh</p>
-        <p id="number_carriage">fdfd</p>
-        <p id="number_code">sss</p>
-        <p id="final_price">fff</p>
-        <p id="offer">gffg</p>
-      </div>
+          <div class="ticket_left">
+            <h3>Ticket</h3>
+            <div class="name_pass">
+              <span>Passeggero:</span>
+              <h4 id="name_passenger"></h4>
+            </div>
+          </div>
 
+          <div class="ticket_right">
+            <h3>Biglietto con prenotazione</h3>
+
+            <div class="data_ticket">
+              <div class="num_carriage">
+                <span>Carrozza</span>
+                <h4 id="number_carriage"></h4>
+              </div>
+
+              <div class="num_code">
+                <span>Codice CP</span>
+                <h4 id="number_code"></h4>
+              </div>
+
+              <div class="descr_offer">
+                <span>Offerta</span>
+                <h4 id="offer"></h4>
+              </div>
+
+              <div class="price_ticket">
+                <span>Prezzo</span>
+                <h4 id="final_price"></h4>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 
 

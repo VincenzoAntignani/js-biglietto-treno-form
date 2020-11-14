@@ -31,11 +31,9 @@ generaBiglietto.addEventListener("click",
 
     // Sconto per minorenni
     var saleUnderage = euroTot / 1.20;
-    // console.log(saleUnderage);
 
     // Sconto per Over65
     var saleSenior = euroTot / 1.40;
-    // console.log(saleSenior);
 
     // Messaggio offerta
     var msgOffer = "";
@@ -79,9 +77,25 @@ generaBiglietto.addEventListener("click",
     // Far apparire il biglietto del treno
     var ticketGenerated = document.getElementById("ticket");
     ticketGenerated.className = "show";
-
   }
 );
+
+// Reset form con tasto Annulla
+var annullaBiglietto = document.getElementById("btn_delete");
+annullaBiglietto.addEventListener("click",
+function() {
+  document.getElementById("name").value = "";
+  document.getElementById("km").value = "";
+  document.getElementById("age").value = "";
+
+  document.getElementById("name_passenger").innerHTML = "";
+  document.getElementById("number_carriage").innerHTML = "";
+  document.getElementById("number_code").innerHTML = "";
+  document.getElementById("offer").innerHTML = "";
+  document.getElementById("final_price").innerHTML = "";
+
+  }
+)
 
 
 
