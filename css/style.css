@@ -90,7 +90,7 @@ select:hover {
   box-shadow: -1px -1px white;
 }
 #btn_delete:hover {
-  background: orange;
+  background: red;
   color: white;
   transform: scale(1.1);
   transition: 0.5s;
