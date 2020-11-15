@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('https://images2.corriereobjects.it/methode_image/2014/04/01/Tecnologia/Foto%20Gallery/Copia%20di%2019%20Mercury%203_MGZOOM.jpg');
+  background-image: url('https://i.pinimg.com/originals/1b/f8/f3/1bf8f3e59ba72a0b9fd515f1e6eeb4f3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -16,7 +16,7 @@ body {
   height: 56vh;
   margin: 0 auto;
   padding: 20px;
-  background: rgba(255, 0, 0, 0.7);
+  background: rgba(0, 0, 80, 0.7);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -100,6 +100,7 @@ select:hover {
 /* Biblietto */
 .hidden {
   opacity: 0;
+  transition: 1s;
 }
 
 .show {

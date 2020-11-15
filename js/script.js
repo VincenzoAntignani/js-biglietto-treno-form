@@ -94,6 +94,9 @@ function() {
   document.getElementById("offer").innerHTML = "";
   document.getElementById("final_price").innerHTML = "";
 
+  // Far sparire il biglietto del treno
+  var annullaBiglietto = document.getElementById("ticket");
+  annullaBiglietto.className = "hidden";
   }
 )
 
